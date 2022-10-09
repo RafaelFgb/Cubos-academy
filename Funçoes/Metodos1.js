@@ -21,4 +21,4 @@ const  pessoa = {
         }
     }
 }
-pessoa.apresentar();
+pessoa.apresentar();;
