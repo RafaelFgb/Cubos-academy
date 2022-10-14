@@ -7,10 +7,16 @@ function verificarMaiorIdade(idade){
         return 'idoso(a)';
     }
 }
-const valorRetornadoPelaFuncao = verificarMaiorIdade(35);
 
-console.log(valorRetornadoPelaFuncao);
+function apresentar (pessoa) {
 
-//ou da na mesma.
+   const faixaEtaria = verificarMaiorIdade(pessoa.idade);
+   console.log(faixaEtaria);
+}
 
-console.log(verificarMaiorIdade(35));
+const  pessoa = {
+    nome: 'Rafael',
+    idade: 26,
+    altura: 1.71
+}
+apresentar(pessoa);
