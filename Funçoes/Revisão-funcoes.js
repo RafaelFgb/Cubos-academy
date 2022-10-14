@@ -10,7 +10,7 @@ let pessoa = {
     idade: 26,
     altura: 1.71,
     peso: 68,
-    profissao: "DEV"
+    profissao: "DEv"
 }
 
 verificacao(pessoa);
