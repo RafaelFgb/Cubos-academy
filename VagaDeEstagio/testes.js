@@ -1,21 +1,19 @@
-function ultimaParada(combustivel,consumo,postosDeGasolina) {
-
-    let maiorDistancia = 0;
-    let autonomiaCarro = consumo * combustivel; //16km
-    let naoExistePostos = -1;
+function calculaTopOcorrenciasDeQueries(texto,queries,k) {
     
-    if (postosDeGasolina.length === 0){
-        console.log(naoExistePostos);
+    const variavelTeste = {};
+    for (let letraTexto of texto) {
+        
+        for (let query of queries) {
+          if(query === letraTexto){
+            variavelTeste[query] += 1;
+          }
+      }
     }
-    for(let item of postosDeGasolina){
-         if(item > maiorDistancia && item < autonomiaCarro){
-         maiorDistancia = item;
-       }
-     }
-    if (postosDeGasolina.length !== 0) {
-        console.log(maiorDistancia);
-    }
-   }
+    console.log(variavelTeste);
+  }
 
-postosDeGasolina = [2,10,15,50];
-ultimaParada(2,8,postosDeGasolina);
+calculaTopOcorrenciasDeQueries(
+    "Lorem ipsum dolor sit am",
+    ["a", "em", "i", "el"],
+    2
+    )
